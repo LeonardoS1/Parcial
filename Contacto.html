@@ -1,0 +1,116 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>"Ayuda a un peludo"</title>
+</head>
+
+<body>
+    
+  <!-- Barra de menu -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="PaginaPrincipal.html">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipP41VValVfXra6z5Csowin7HZLK3hPnA7al-Uac=w1080-h608-p-no-v0" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="Nosotros.html">Nosotros</a>
+          </li>
+            
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="Tienda" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tienda
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Bandanas.html">Bandanas</a></li>
+              <li><a class="dropdown-item" href="Correas.html">Correas</a></li>
+              <li><a class="dropdown-item" href="Identificaciones.html">Identificaciones</a></li>
+            </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="Donaciones.html">Donaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contacto.html">Contacto</a>
+            </li>
+            
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="Usuario" placeholder="Usuario" aria-label="Usuario">
+          <input class="form-control me-2" type="password" placeholder="Contraseña" aria-label="Contraseña">
+          <button class="btn btn-outline-success" type="submit">Ingresar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+ <!-- Formulario --> 
+
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltip01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltip02" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltipUsername" class="form-label">Email</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+            <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+            <div class="invalid-tooltip">
+              Escribe un correo electronico válido.
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip03" class="form-label">ciudad</label>
+          <input type="text" class="form-control" id="validationTooltip03" required>
+          <div class="invalid-tooltip">
+            Escribe una ciudad válida.
+          </div>
+        </div>
+        <div class="col-md-3 position-relative">
+          <label for="telNO" class="form-label">Telefono</label>
+          <input type="tel" class="form-control" id="telNO" required>
+          <div class="invalid-tooltip">
+            Escribe un numero de teléfono válido.
+          </div>
+        </div>
+        
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+      </form>
+
+    </div>
+  
+  </div>
+</div> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="js/agregar_registro.js"></script>
+</body>
+
+</html>
