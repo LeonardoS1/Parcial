@@ -1,0 +1,7 @@
+body { 
+    background-image: url("imagenes/huellas\ perro.png");
+    background-repeat:repeat-x center ;
+}
+label{
+    color: black;
+}
