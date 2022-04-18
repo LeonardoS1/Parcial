@@ -5,3 +5,11 @@ body {
 label{
     color: black;
 }
+
+.formulario{
+    background-color: rgb(97, 151, 160);
+    justify-content: center;
+    text-shadow: 1px 1px rgb(228, 130, 130);
+    color: rgb(27, 147, 63); 
+
+}
