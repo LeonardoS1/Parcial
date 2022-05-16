@@ -9,68 +9,27 @@
     <link rel="stylesheet" href="estilos.css">
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <title>Compañero Fiel</title>
     <link rel="icon" href="imagenes/icono.jpg">
 
 </head>
 
 <body>
-<!-- Barra de menu -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="PaginaPrincipal.html">
-        <img src="imagenes/icono.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        <h6>Inicio</h6>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="Nosotros.html">Nosotros</a>
-          </li>
-            
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="Tienda" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Tienda
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="Bandanas.html">Bandanas</a></li>
-              <li><a class="dropdown-item" href="Correas.html">Correas</a></li>
-              <li><a class="dropdown-item" href="Identificaciones.html">Identificaciones</a></li>
-            </ul>
-            <li class="nav-item">
-              <a class="nav-link" href="Donaciones.html">Donaciones</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Contacto.html">Contacto</a>
-            </li>
-            
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="Usuario" placeholder="Usuario" aria-label="Usuario">
-          <input class="form-control me-2" type="password" placeholder="Contraseña" aria-label="Contraseña">
-          <button class="btn btn-outline-success" type="submit">Ingresar</button>
-        </form>
-      </div>
-    </div>
-  </nav>  
+  
 <!--Fundaciones-->
 <div>
     <div class="container"> 
-        <div class="row-6">
-          <div class="col-sm-2 d-flex justify-content-center"></div>
-          <div class="col-sm-8 d-flex justify-content-center">
+        <div class="row">
+          <div class="col-sm-2 d-flex"></div>
+          <div class="col-sm-8 d-flex">
             <img src="https://fundacionarca.cl/wp-content/uploads/2020/05/Logo_eslogan_sinfondo.png" class="d-block w-100" alt="FundacionArca" width="1000" height="500" />
           </div>
-          <div class="col-sm-2 d-flex justify-content-center"></div>
+          <div class="col-sm-2 d-flex"></div>
         </div> 
-        <div class="row-6">
-          <div class="col-sm-2 d-flex justify-content-center"></div>
-          <div class="col-sm-8 d-flex justify-content-center">
+        <div class="row">
+          <div class="col-sm-2 d-flex"></div>
+          <div class="col-sm-8 d-flex">
             <p> ARCA es una organización sin fines de lucro, compuesta por un equipo multidisciplinario de profesionales,
                 tales como médicos veterinarios y abogados, todos versados en el manejo y cuidado animal. Esta organización
                 nace a fines del año 2016, como una respuesta a la problemática chilena en cuanto a la situación de abandono 
@@ -80,12 +39,14 @@
                 años, incidiendo negativamente en la dinámica relacional entre los seres humanos y el resto de los animales.
             </p>
           </div>
-          <div class="col-sm-2 d-flex justify-content-center"></div>
+          <div class="col-sm-2 d-flex"></div>
         </div>
     </div>    
 </div>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  <script src="js/agregar_registro.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<!-- Js propio-->
+<script src="js/validaciones.js"></script>
+<script src="js/Variables.js"></script>
 </body>
 </html>

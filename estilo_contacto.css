@@ -1,5 +1,5 @@
 body { 
-    background-image: url("imagenes/huellas\ perro.png");
+    
     background-repeat:repeat-x center ;
 }
 label{
@@ -7,9 +7,11 @@ label{
 }
 
 .formulario{
-    background-color: rgb(97, 151, 160);
-    justify-content: center;
     text-shadow: 1px 1px rgb(228, 130, 130);
     color: rgb(27, 147, 63); 
 
+}
+
+.colorForm{
+    background-color: rgb(97, 151, 160);
 }
