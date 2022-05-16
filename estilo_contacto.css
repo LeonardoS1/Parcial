@@ -1,9 +1,5 @@
 body { 
-<<<<<<< HEAD
     
-=======
-    background-image: url("imagenes/huellas\ perro.png");
->>>>>>> d86a20d5e512f3b322ffc45dc883596b2a59ee03
     background-repeat:repeat-x center ;
 }
 label{
@@ -11,7 +7,6 @@ label{
 }
 
 .formulario{
-<<<<<<< HEAD
     text-shadow: 1px 1px rgb(228, 130, 130);
     color: rgb(27, 147, 63); 
 
@@ -19,11 +14,4 @@ label{
 
 .colorForm{
     background-color: rgb(97, 151, 160);
-=======
-    background-color: rgb(97, 151, 160);
-    justify-content: center;
-    text-shadow: 1px 1px rgb(228, 130, 130);
-    color: rgb(27, 147, 63); 
-
->>>>>>> d86a20d5e512f3b322ffc45dc883596b2a59ee03
 }
