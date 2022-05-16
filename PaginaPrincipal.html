@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="estilo_principal.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Compañero Fiel</title>
+    <link rel="icon" href="imagenes/icono.jpg">
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 
-    <title>"Ayuda a un peludo"</title>
 </head>
 
 <body>
@@ -18,38 +20,33 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="PaginaPrincipal.html">
-        <img src="https://lh3.googleusercontent.com/p/AF1QipP41VValVfXra6z5Csowin7HZLK3hPnA7al-Uac=w1080-h608-p-no-v0" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        <img src="imagenes/icono.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        <h6>Inicio</h6>
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" >
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="Nosotros.html">Nosotros</a>
+            <a role="button" class="nav-link" onclick="mostrarNosotros()"  id="Nosotros" >Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a role="button" class="nav-link"  onclick="mostrarTienda()" id="Tienda" >Tienda</a>
+          </li>  
+  
+          <li class="nav-item">
+            <a role="button" class="nav-link" onclick="mostrarDonaciones()" id="Donaciones">Donaciones</a>
+          </li>
+          <li class="nav-item">
+            <a role="button" class="nav-link" onclick="mostrarContacto()" id="Contacto">Contacto</a>
           </li>
             
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="Tienda" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Tienda
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="Bandanas.html">Bandanas</a></li>
-              <li><a class="dropdown-item" href="Correas.html">Correas</a></li>
-              <li><a class="dropdown-item" href="Identificaciones.html">Identificaciones</a></li>
-            </ul>
-            <li class="nav-item">
-              <a class="nav-link" href="Donaciones.html">Donaciones</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Contacto.html">Contacto</a>
-            </li>
-            
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="Usuario" placeholder="Usuario" aria-label="Usuario">
-          <input class="form-control me-2" type="password" placeholder="Contraseña" aria-label="Contraseña">
+        <form class="d-flex" id="formulario">
+          <input class="form-control me-2" type="Usuario" placeholder="Usuario" aria-label="Usuario" id="usuario">
+          <input class="form-control me-2" type="password" placeholder="Contraseña" aria-label="Contraseña" id="password">
           <button class="btn btn-outline-success" type="submit">Ingresar</button>
         </form>
       </div>
@@ -68,27 +65,27 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <a href="Nosotros.html"> <img src="https://www.canalipe.tv/sites/default/files/styles/895x490/public/web/noticias/img_main/08-19/08-12-adopta.jpg?itok=zcUXQ3KJ" class="d-block w-100" alt="Nosotros" width="1200" height="800" /></a>
+                  <a onclick="mostrarNosotros()" role="button"> <img src="imagenes/imagen adopta.jpg" class="d-block w-100" alt="Nosotros" width="1200" height="800" /></a>
                     <div class="carousel-caption d-none d-md-block">
                       <h2>Nosotros</h2>
                 </div>
                 </div>
                 <div class="carousel-item">
-                  <a href="Nosotros.html"> <img src="https://www.dhresource.com/0x0/f2/albu/g9/M01/96/61/rBVaWF4W-0OAYG2rAAmXFmGBlMg686.jpg" class="d-block w-100" alt="Nosotros" width="1200" height="800" /></a>
+                  <a onclick="mostrarTienda()" role="button"> <img src="imagenes/imagen perros.jpg" class="d-block w-100" alt="Tienda" width="1200" height="800" /></a>
                   <div class="carousel-caption d-none d-md-block">
                     <h2>Tienda</h2>
                     
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <a href="Nosotros.html"> <img src="https://img.freepik.com/vector-gratis/perro-dibujos-animados-lata-donacion-mano-moneda-dinero-sobre-azul_18591-63545.jpg" class="d-block w-100" alt="Nosotros" width="1200" height="800" /></a>
+                  <a onclick="mostrarDonaciones()" role="button"> <img src="imagenes/perro donacion.jpg" class="d-block w-100" alt="Donaciones" width="1200" height="800" /></a>
                   <div class="carousel-caption d-none d-md-block">
                     <h2>Donaciones</h2>
                     
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <a href="Nosotros.html"> <img src="https://troy.cl/wp-content/uploads/2021/11/5-13.jpg" class="d-block w-100" alt="Nosotros" width="1200" height="800" /></a>
+                  <a onclick="mostrarContacto()" role="button"> <img src="imagenes/perro celular.jpg" class="d-block w-100" alt="Contacto" width="1200" height="800" /></a>
                   <div class="carousel-caption d-none d-md-block">
                     <h2>Contacto</h2>
                     
@@ -107,11 +104,20 @@
           </div>
 
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="js/agregar_registro.js"></script>
+      </div>
+
+      <div class="container">
+        <div id="Carga"></div>
+        
+      </div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<!-- Js propio-->
+<script src="js/validaciones.js"></script>
+<script src="js/Variables.js"></script>
+<script src="js/recargaWeb.js"></script>
 </body>
+
 
 </html>
    
