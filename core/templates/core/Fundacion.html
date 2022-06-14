@@ -1,0 +1,24 @@
+{% extends 'core/Base.html' %}
+{% load static %}
+{% block content %}
+<!--Fundaciones-->
+<div>
+    <div class="container"> 
+        <div class="row">
+          <div class="col-sm-2 d-flex"></div>
+          <div class="col-sm-8 d-flex">
+            <img src="{{fundacion.imagen.url}}" class="d-block w-100" alt="{{fundacion.nombre}}" width="1000" height="500" />
+          </div>
+          <div class="col-sm-2 d-flex"></div>
+        </div> 
+        <div class="row">
+          <div class="col-sm-2 d-flex"></div>
+          <div class="col-sm-8 d-flex">
+            <p> {{fundacion.descripcion}}
+            </p>
+          </div>
+          <div class="col-sm-2 d-flex"></div>
+        </div>
+    </div>    
+</div>
+{% endblock %}
