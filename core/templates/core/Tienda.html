@@ -1,0 +1,23 @@
+{% extends 'core/PaginaPrincipal.html' %}
+{% load static %}
+{% block contento %}
+<!-- Opciones de tienda-->
+<div>
+    <div class="container"> 
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="{% url 'productos' tipo='0' %}"><img src= "{% static 'imagenes/bandanas.jpg' %}" class="d-block w-100" alt="Bandanas" width="800" height="500" /></a>
+                <h2>Bandanas</h2>
+            </div>
+            <div class="col-sm-4">
+                <a href="{% url 'productos' tipo='1' %}"> <img src="{% static 'imagenes/correas.jpg' %}" class="d-block w-100" alt="Correas" width="800" height="500" /></a>
+                <h2>Correas</h2>
+            </div>
+            <div class="col-sm-4">
+                <a href="{% url 'productos' tipo='2' %}"> <img src="{% static 'imagenes/identificaciones.jpg'%}"class="d-block w-100" alt="Identificaciones" width="800" height="500" /></a>
+                <h2>Identificaciones</h2>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

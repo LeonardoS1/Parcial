@@ -1,0 +1,53 @@
+{% extends 'core/PaginaPrincipal.html' %}
+{% load static %}
+{% block contento %}
+<!-- Participantes -->
+<div>
+  <div class="container">
+    <br>
+    <div class="row">
+      <p>
+        <br>
+        <H1 style="font-size: aria-label">"SIN FINES DE LUCRO"</H1>
+        <br> 
+        Somos un nuevo concepto en servicios veterinarios solidarios, dando una atención de calidad a bajo costo,
+        aspirando a ser un aporte a las familias de nuestro país.
+        
+      </p>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-sm-4 d-flex">
+        <img src="{% static 'imagenes/usuario1.png' %}" class="d-block w-100" alt="Elizabeth" width="200" height="200" />
+          <p>
+            Nombre:Elizabeth 
+            Apellidos:Lohse
+            Cargo:Medico V.
+            Experiencia Laboral: 7 años
+          </p>
+      </div>
+
+      <div class="col-sm-4 d-flex">
+        <img src="{% static 'imagenes/usuario1.png' %}" class="d-block w-100" alt="Leonardo" width="200" height="200" />
+          <p>
+            Nombre:Leonardo 
+            Apellidos:Sivira
+            Cargo:Medico V.
+            Experiencia Laboral: 9 años
+          </p>
+      </div>
+
+      <div class="col-sm-4 d-flex">
+        <img src="{% static 'imagenes/usuario1.png' %}" class="d-block w-100" alt="Julissa" width="200" height="200" /></a>
+          <p>
+            Nombre:Julissa 
+            Apellidos:Cuisano
+            Cargo:Medico V.
+            Experiencia Laboral: 9 años
+          </p>
+      </div>
+    </div>
+  </div>
+</div> 
+{% endblock %}

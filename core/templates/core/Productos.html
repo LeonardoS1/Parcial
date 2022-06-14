@@ -1,0 +1,75 @@
+{% extends 'core/Base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+{% endblock %}
+{% block content %}
+<!-- Opciones de tienda-->
+<div>
+  <div>
+    <div class="container"> 
+      <div class="table-responsive col-md-12" >
+        <table class="table" id="tabla">
+            <h1>Catalogo</h1>
+    <br>
+    <br>
+        <thead>
+          <tr>
+            <th scope="col" class="">#</th>
+            <th scope="col" class="">Nombre</th>
+            <th scope="col" class="">Color</th>
+            <th scope="col" class="">Precio</th>
+            <th scope="col" class=""></th>|
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in productos %}
+          <tr>
+            <td class="">{{p.id}}</td>
+            <td class="">{{p.nombre}}</td>
+            <td class="">{{p.color}}</td>
+            <td class="">{{p.precio}}</td>
+            <td class="">
+              <img src="{{p.imagen.url}}" style="max-width: 250px; max-height: 250px;" class="img-fluid" alt="imagen" width="" height="" />
+            </td>
+            <td>
+              <a class="mr-3" href="{% url 'editar_Producto' p.id %} ">
+                <i class="fas fa-edit mr-1"></i>Editar</a>
+
+              <a class="text-danger" href="#" onclick="eliminarProducto({{p.id}})">
+                  <i class="fas fa-trash-alt mr-1"></i>
+                  Eliminar
+              </a>
+          </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+  </div>
+  </div>
+</div>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+  function eliminarProducto(id){
+      Swal.fire({
+          'title': 'Confirmación',
+          'text': '¿Estás seguro de eliminar este producto?',
+          'icon': 'question',
+          'showCancelButton': true,
+          'confirmButtonColor': '#3085d6',
+          'cancelButtonColor': '#d33',
+          'confirmButtonText': 'Sí, eliminar producto',
+  
+          'cancelButtonText': 'Cancelar'
+  
+      }).then(function(result){
+          if (result.isConfirmed){
+              window.location.href='/eliminar_Producto/'+id+'/'
+          }
+      })
+  }
+  
+  </script>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'core/Base.html' %}
+{% load static %}
+{% block content %}
+<!-- Opciones de tienda-->
+<div>
+  <div>
+    <div class="container"> 
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <table>
+        {{  agregar_Fundacion.as_table }}
+
+      </table>
+        <hr>
+        <div class="col d-flex justify-content-end">
+            <input class="mr-2 btn btn-info" type="reset" value="Limpiar">
+            <input type="submit" value="Guardar" class="btn btn-success">
+        </div>
+
+
+    </form>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
+      {% if mensaje %}
+      <div class="alert alert-success">
+          <p> {{mensaje}}</p>
+      </div>
+      {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}
