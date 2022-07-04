@@ -21,4 +21,4 @@ class FundacionForm(ModelForm):
     class Meta:
         model = Fundacion
         fields = ['nombre', 'descripcion', "imagen"]
-  
+        

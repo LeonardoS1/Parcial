@@ -5,6 +5,7 @@
 {% endblock %}
 {% block content %}
 <!-- Opciones de tienda-->
+{% csrf_token %}
 <div>
   <div>
     <div class="container"> 
@@ -32,6 +33,7 @@
             <td class="">{{c.email}}</td>
             <td class="">{{c.direccion}}</td>
             <td class="">{{c.telefono}}</td>
+            {% if user.is_staff %}
             <td>
               <a class="mr-3" href="{% url 'editar_Contacto' c.id %} ">
                 <i class="fas fa-edit mr-1"></i>Editar</a>
@@ -41,6 +43,7 @@
                   Eliminar
               </a>
           </td>
+            {% endif %}
             </tr>
           {% endfor %}
         </tbody>

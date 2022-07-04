@@ -1,0 +1,5 @@
+credenciales para compañero fiel 
+
+para entrar sesiones de la pagina
+superuser: julissa
+password: julissa123

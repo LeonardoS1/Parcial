@@ -1,0 +1,18 @@
+{% extends 'core/Base.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <form action="" method="post" class="blancofondo col-md-12" >
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="usuario">Nombre de usuario</label>
+            <input type="text" class="form-control" name="usuario" id="">
+        </div>
+        <div class="form-group">
+            <label for="contrasenia">Contraseña</label>
+            <input type="password" class="form-control" name="contrasenia" id="">
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Iniciar sesión</button>
+    </form>
+</div>
+{% endblock %}

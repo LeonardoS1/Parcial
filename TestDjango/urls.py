@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path   # corresponde a la urls de rest_vehiculo agregar include se agregara un import include "from django.urls import include,path"
+from django.urls import path, include  
 from core import views
 from django.conf.urls.static import static
 from django.conf import settings           
@@ -22,6 +22,10 @@ urlpatterns = [
     path('contactos/', views.contactos, name="contactos"),
     path('nosotros/', views.nosotros, name="nosotros"),
     path('tienda/', views.tienda, name="tienda"),
+    path('api/', include('rest_fundacion.urls')),
+    path('cerrar_sesion',views.cerrar_sesion,name="cerrar_sesion"),
+    path('login/',views.login,name="login"),
+    path('crear_usuario',views.crear_usuario,name="crear_usuario"),
     
 ]
 

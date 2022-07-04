@@ -2,6 +2,7 @@
 {% load static %}
 {% block contento %}
 <!--Fundaciones-->
+{% csrf_token %}
 <div>
   <div class="container"> 
     {% for f in fundaciones %}
@@ -9,7 +10,7 @@
           <div class="col-sm-4 d-flex">
               <a href="{% url 'Fundacion' f.id %}"><img src="{{f.imagen.url}}" class="d-block w-100" alt="{{f.nombre}}" width="500" height="400" /></a>
           
-
+              {% if user.is_staff %}
           <a class="mr-3" href="{% url 'editar_Fundacion' f.id %} ">
             <i class="fas fa-edit mr-1"></i>Editar</a>
 
@@ -17,6 +18,7 @@
               <i class="fas fa-trash-alt mr-1"></i>
               Eliminar
           </a>
+          {% endif %}
         </div>
         </div>
     {% endfor %}

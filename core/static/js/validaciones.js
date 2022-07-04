@@ -92,3 +92,50 @@ function validarFormulario(evento) {
     this.submit();
 }
 
+$("#crear_usuario").validate({
+    "errorClass": "is-invalidate",
+    "rules":{
+        first_name:{
+            required: true
+        },
+        last_name:{
+            required: true
+        },
+        email:{
+            required: true
+        },
+        username:{
+            required: true,
+            minlength: 3,
+            maxlength: 15
+        },
+        password:{
+            required: true,
+            minlength: 8,
+            maxlength: 15
+        },
+    },
+    "messages":{
+        first_name:{
+            required: "El nombre es obligatorio"
+        },
+        last_name:{
+            required: "El apellido es obligatorio"
+        },
+        email:{
+            required: "El email es obligatorio"
+
+        },
+        username:{
+            required: "El nombre de usuario es obligatorio",
+            minlength: "El minimo de caracteres es de 3",
+            maxlength: "El maximo de caracteres es de 15"
+        },
+        password:{
+            required: "La contraseña es obligatoria",
+            minlength: "El minimo de caracteres es de 8",
+            maxlength: "El maximo de caracteres es de 15"
+        }
+    }
+})
+

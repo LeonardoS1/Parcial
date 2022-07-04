@@ -43,18 +43,29 @@
           <li class="nav-item">
             <a role="button" class="nav-link" href="{% url 'contacto' %}" id="Contacto">Contacto</a>
           </li>
+          {% if user.is_staff %}
           <li class="nav-item">
             <a role="button" class="nav-link" href="{% url 'agregar_Producto' %}" id="agregar_Producto">Agregar Producto</a>
           </li>
           <li class="nav-item">
             <a role="button" class="nav-link" href="{% url 'agregar_Fundacion' %}" id="agregar_Fundacion">Agregar Fundacion</a>
           </li>
+          <li class="nav-item">
+            <a role="button" class="nav-link" href="{% url 'contactos' %}" id="contactos">Ver contactos</a>
+          </li>
+          <li class="nav-item">
+            <a role="button" class="nav-link" href="{% url 'crear_usuario' %}" id="crear_usuario">crear_usuario</a>
+          </li>
+          {% endif %}
         </ul>
-        <form class="d-flex" id="formulario">
-          <input class="form-control me-2" type="Usuario" placeholder="Usuario" aria-label="Usuario" id="usuario">
-          <input class="form-control me-2" type="password" placeholder="Contraseña" aria-label="Contraseña" id="password">
-          <button class="btn btn-outline-success" type="submit">Ingresar</button>
-        </form>
+        <div class="form-inline my-2 my-lg-0">
+          {% if user.is_authenticated %}
+          <p>{{user.username}}</p>
+          <a href="{% url 'cerrar_sesion' %}">Cerrar Sesión</a>
+          {% else %}
+          <a href="{% url 'login' %}">Iniciar sesión</a>
+          {% endif %}
+                  </div>
       </div>
     </div>
   </nav>
